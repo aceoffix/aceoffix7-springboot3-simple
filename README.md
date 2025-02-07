@@ -71,15 +71,16 @@ IntelliJ IDEA, JDK version 17 or higher.
 
 ```java
 @Bean
-    public ServletRegistrationBean pageofficeRegistrationBean() {
-        com.acesoftcorp.aceoffix.aceserver.Server aceerver = new com.acesoftcorp.aceoffix.aceserver.Server();
-        aceerver.setSysPath(poSysPath);//设置PageOffice注册成功后,license.lic文件存放的目录
-        ServletRegistrationBean srb = new ServletRegistrationBean(aceerver);
-        srb.addUrlMappings("/server.ace");
-        srb.addUrlMappings("/aceclient");
-        srb.addUrlMappings("/aceoffix.js");
-        return srb;//
-    }
+public ServletRegistrationBean aceoffixRegistrationBean() {
+       com.acesoftcorp.aceoffix.aceserver.Server aceerver = new com.acesoftcorp.aceoffix.aceserver.Server();
+       //Set the directory where the license.lic file is stored after successful registration of Aceoffix.
+       aceerver.setSysPath(poSysPath);
+       ServletRegistrationBean srb = new ServletRegistrationBean(aceerver);
+       srb.addUrlMappings("/server.ace");
+       srb.addUrlMappings("/aceclient");
+       srb.addUrlMappings("/aceoffix.js");
+       return srb;//
+}
 ```
 
 - Add the following code to the parent page of the page which you want to edit Office document. Write the following code
@@ -105,7 +106,6 @@ index.html page.
 @RequestMapping(value = "/openFile")
 public ModelAndView openFile(HttpServletRequest request) {
     AceoffixCtrl aceCtrl = new AceoffixCtrl(request);
-    aceCtrl.setSaveFilePage("saveFile");
     aceCtrl.webOpen("/doc/editword.docx" , OpenModeType.docNormalEdit, "Luna");
     request.setAttribute("aceoffix", aceCtrl.getHtml());
     ModelAndView mv = new ModelAndView("Word");
@@ -141,6 +141,7 @@ public void saveFile(HttpServletRequest request, HttpServletResponse response) {
 <body>
 <script type="text/javascript">
     function SaveDoc() {
+        aceoffixctrl.SaveFilePage = "/doc/saveFile";
         aceoffixctrl.WebSave();
     }
 
