@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Word</title>
+    <meta content="no-cache" http-equiv="pragma">
+    <meta content="no-cache" http-equiv="cache-control">
+    <meta content="0" http-equiv="expires">
+    <meta content="keyword1,keyword2,keyword3" http-equiv="keywords">
+    <meta content="This is my page" http-equiv="description">
+</head>
+<body>
+<script type="text/javascript">
+    function SaveDoc() {
+        aceoffixctrl.SaveFilePage = "/doc/saveFile";
+        aceoffixctrl.WebSave();
+    }
+
+    function OnAceoffixCtrlInit() {
+        aceoffixctrl.AddCustomToolButton("Save", "SaveDoc()", 1);
+    }
+</script>
+<div style=" width:auto; height:98vh;" th:utext="${aceoffix}">
+</div>
+</body>
+</html>
