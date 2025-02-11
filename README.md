@@ -21,7 +21,7 @@ IntelliJ IDEA, JDK version 17 or higher.
 
 - Download the Aceoffix client program.
 
-  [aceclientsetup_7.0.0.2.exe](https://github.com/aceoffix/aceoffix-client/releases/download/v7.0.0.2/aceclientsetup_7.0.0.2.exe)
+  [aceclientsetup_7.0.0.2.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.0.2/aceclientsetup_7.0.0.2.exe)
 
 - Copy the Aceoffix client program downloaded in the previous step to the newly created Aceoffix folder.
 
@@ -39,7 +39,7 @@ IntelliJ IDEA, JDK version 17 or higher.
 
 - Download the Aceoffix client program.
 
-​    [aceclientsetup_7.0.0.2.exe](https://github.com/aceoffix/aceoffix-client/releases/download/v7.0.0.2/aceclientsetup_7.0.0.2.exe)
+​    [aceclientsetup_7.0.0.2.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.0.2/aceclientsetup_7.0.0.2.exe)
 
 - Copy the Aceoffix client program downloaded in the previous step to the newly created Aceoffix folder.
 
