@@ -21,7 +21,7 @@ IntelliJ IDEA, JDK version 17 or higher.
 
 - Download the Aceoffix client program.
 
-  [aceclientsetup_7.0.0.2.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.0.2/aceclientsetup_7.0.0.2.exe)
+  [aceclientsetup_7.0.0.2.exe](https://github.com/aceoffix/aceoffix-client/releases/download/v7.0.0.2/aceclientsetup_7.0.0.2.exe)
 
 - Copy the Aceoffix client program downloaded in the previous step to the newly created Aceoffix folder.
 
@@ -39,7 +39,7 @@ IntelliJ IDEA, JDK version 17 or higher.
 
 - Download the Aceoffix client program.
 
-​    [aceclientsetup_7.0.0.2.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.0.2/aceclientsetup_7.0.0.2.exe)
+​    [aceclientsetup_7.0.0.2.exe](https://github.com/aceoffix/aceoffix-client/releases/download/v7.0.0.2/aceclientsetup_7.0.0.2.exe)
 
 - Copy the Aceoffix client program downloaded in the previous step to the newly created Aceoffix folder.
 
@@ -47,7 +47,7 @@ IntelliJ IDEA, JDK version 17 or higher.
   has been published to the [Maven Central Repository](https://central.sonatype.com/artifact/com.acesoftcorp/aceoffix).
   It is recommended to use the latest version.
 
-  If you are using Tomcat 10 or a later version, use the following `pom.xml` configuration.
+  use the following `pom.xml` configuration.
 
   ```xml
   <dependency>
@@ -57,29 +57,19 @@ IntelliJ IDEA, JDK version 17 or higher.
   </dependency>
   ```
 
-  If you are using Tomcat 9 or an earlier version, use the following `pom.xml` configuration.
-
-  ```xml
-  <dependency>
-       <groupId>com.acesoftcorp</groupId>
-        <artifactId>aceoffix</artifactId>
-        <version>7.0.0.2-javax</version>
-  </dependency>
-  ```
-
 - Configure the following code in the `Application` class, which is the startup class of your project.
 
 ```java
 @Bean
 public ServletRegistrationBean aceoffixRegistrationBean() {
-       com.acesoftcorp.aceoffix.aceserver.Server aceerver = new com.acesoftcorp.aceoffix.aceserver.Server();
-       //Set the directory where the license.lic file is stored after successful registration of Aceoffix.
-       aceerver.setSysPath(poSysPath);
-       ServletRegistrationBean srb = new ServletRegistrationBean(aceerver);
-       srb.addUrlMappings("/server.ace");
-       srb.addUrlMappings("/aceclient");
-       srb.addUrlMappings("/aceoffix.js");
-       return srb;//
+    com.acesoftcorp.aceoffix.aceserver.Server aceserver = new com.acesoftcorp.aceoffix.aceserver.Server();
+    //Set the directory where the license.lic file is stored after successful registration of Aceoffix.
+    aceserver.setSysPath(aceSysPath);
+    ServletRegistrationBean srb = new ServletRegistrationBean(aceserver);
+    srb.addUrlMappings("/server.ace");
+    srb.addUrlMappings("/aceclient");
+    srb.addUrlMappings("/aceoffix.js");
+    return srb;//
 }
 ```
 
