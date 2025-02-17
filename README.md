@@ -1,6 +1,6 @@
 # aceoffix7-springboot3-simple
 
-**Latest Version：7.0.0.2**
+**Latest Version：7.0.1.1**
 
 ### 1. Introduction
 
@@ -21,7 +21,7 @@ IntelliJ IDEA, JDK version 17 or higher.
 
 - Download the Aceoffix client program.
 
-  [aceclientsetup_7.0.0.2.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.0.2/aceclientsetup_7.0.0.2.exe)
+  [aceclientsetup_7.0.1.1.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.1.1/aceclientsetup_7.0.1.1.exe)
 
 - Copy the Aceoffix client program downloaded in the previous step to the newly created Aceoffix folder.
 
@@ -39,24 +39,23 @@ IntelliJ IDEA, JDK version 17 or higher.
 
 - Download the Aceoffix client program.
 
-​    [aceclientsetup_7.0.0.2.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.0.2/aceclientsetup_7.0.0.2.exe)
+[aceclientsetup_7.0.1.1.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.1.1/aceclientsetup_7.0.1.1.exe)
 
 - Copy the Aceoffix client program downloaded in the previous step to the newly created Aceoffix folder.
 
 - Introduce the Aceoffix dependency in the `pom.xml` file of your project using the following code. The `aceoffix.jar`
-  has been published to the [Maven Central Repository](https://central.sonatype.com/artifact/com.acesoftcorp/aceoffix).
-  It is recommended to use the latest version.
-
+  has been published to the [Maven Central Repository](https://central.sonatype.com/artifact/com.acesoftcorp/aceoffix).It is recommended to use the latest version.
+  
   use the following `pom.xml` configuration.
-
+  
   ```xml
   <dependency>
        <groupId>com.acesoftcorp</groupId>
         <artifactId>aceoffix</artifactId>
-        <version>7.0.0.2</version>
+        <version>7.0.1.1</version>
   </dependency>
   ```
-
+  
 - Configure the following code in the `Application` class, which is the startup class of your project.
 
 ```java
