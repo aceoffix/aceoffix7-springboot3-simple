@@ -1,6 +1,6 @@
 # aceoffix7-springboot3-simple
 
-**Latest Version：7.0.1.1**
+**Latest Version：7.1.1.1**
 
 ### 1. Introduction
 
@@ -21,7 +21,7 @@ IntelliJ IDEA, JDK version 17 or higher.
 
 - Download the Aceoffix client program.
 
-  [aceclientsetup_7.0.1.1.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.1.1/aceclientsetup_7.0.1.1.exe)
+  [aceclientsetup_7.x.x.x.exe](https://github.com/aceoffix/aceoffix7-client/releases/)
 
 - Copy the Aceoffix client program downloaded in the previous step to the newly created Aceoffix folder.
 
@@ -39,7 +39,7 @@ IntelliJ IDEA, JDK version 17 or higher.
 
 - Download the Aceoffix client program.
 
-[aceclientsetup_7.0.1.1.exe](https://github.com/aceoffix/aceoffix7-client/releases/download/v7.0.1.1/aceclientsetup_7.0.1.1.exe)
+  [aceclientsetup_7.x.x.x.exe](https://github.com/aceoffix/aceoffix7-client/releases/)
 
 - Copy the Aceoffix client program downloaded in the previous step to the newly created Aceoffix folder.
 
@@ -52,7 +52,7 @@ IntelliJ IDEA, JDK version 17 or higher.
   <dependency>
        <groupId>com.acesoftcorp</groupId>
         <artifactId>aceoffix</artifactId>
-        <version>7.0.1.1</version>
+        <version>7.1.1.1</version>
   </dependency>
   ```
   
