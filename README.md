@@ -1,6 +1,6 @@
 # aceoffix7-springboot3-simple
 
-**Latest Version：7.1.1.1**
+**Latest Version：7.1.1.2**
 
 ### 1. Introduction
 
@@ -52,7 +52,7 @@ IntelliJ IDEA, JDK version 17 or higher.
   <dependency>
        <groupId>com.acesoftcorp</groupId>
         <artifactId>aceoffix</artifactId>
-        <version>7.1.1.1</version>
+        <version>7.1.1.2</version>
   </dependency>
   ```
   
