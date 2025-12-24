@@ -49,10 +49,16 @@ IntelliJ IDEA, JDK version 17 or higher.
   use the following `pom.xml` configuration.
   
   ```xml
+  <!-- Aceoffix-->
   <dependency>
-       <groupId>com.acesoftcorp</groupId>
-        <artifactId>aceoffix</artifactId>
-        <version>7.3.1.1</version>
+      <groupId>com.acesoftcorp</groupId>
+      <artifactId>aceoffix</artifactId>
+      <version>7.3.1.1</version>
+  </dependency>
+  <!-- Required. WebSocket - required for Aceoffix v7.3.1.1 and above -->
+  <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-websocket</artifactId>
   </dependency>
   ```
   
@@ -70,6 +76,7 @@ IntelliJ IDEA, JDK version 17 or higher.
         srb.addUrlMappings("/aceoffix.js");
         return srb;
     }
+
     /**
      *Enable WebSocket configuration for Aceoffix. Required for Aceoffix v7.3.1.1 and above.
      *@return
@@ -82,7 +89,6 @@ IntelliJ IDEA, JDK version 17 or higher.
         );
         return exporter;
     }
-
 
     /**
      *Aceoffix acewserver configure cross-domain. Required for Aceoffix v7.3.1.1 and above.
